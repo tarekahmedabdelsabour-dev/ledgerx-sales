@@ -1,8 +1,8 @@
 # LedgerX Sales (Field Sales)
 
-شاشة مندوب المبيعات للموبايل فوق ERPNext — تطبيق Frappe مستقل (`ledgerx_sales`) يعتمد على `erpnext`.
+شاشة مندوب المبيعات للموبايل فوق LedgerX — تطبيق Frappe مستقل (`ledgerx_sales`) يعتمد على `erpnext`.
 
-Mobile salesman (van-sales) app for ERPNext: route, customers and debts, sales from the van warehouse,
+Mobile salesman (van-sales) app for LedgerX: route, customers and debts, sales from the van warehouse,
 collections, cash / bank-deposit handover, GPS visits, and day close.
 
 دليل التشغيل بالعربي: [SALESMAN_AR.md](SALESMAN_AR.md)

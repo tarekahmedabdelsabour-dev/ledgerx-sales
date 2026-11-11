@@ -1,7 +1,7 @@
 [project]
 name = "ledgerx_sales"
 authors = [{ name = "LedgerX", email = "hello@ledgerx.local" }]
-description = "LedgerX Field Sales - mobile salesman screen: van stock, routes, collections, cash handover and day close for ERPNext"
+description = "LedgerX Field Sales - mobile salesman screen: van stock, routes, collections, cash handover and day close for LedgerX"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]

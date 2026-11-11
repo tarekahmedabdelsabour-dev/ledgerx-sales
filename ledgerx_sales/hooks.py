@@ -3,7 +3,7 @@ from ledgerx_sales import __version__ as app_version  # noqa: F401
 app_name = "ledgerx_sales"
 app_title = "LedgerX Sales"
 app_publisher = "LedgerX"
-app_description = "Field sales for ERPNext: a mobile screen for the salesman with van stock, routes, collections, cash handover and day close"
+app_description = "Field sales for LedgerX: a mobile screen for the salesman with van stock, routes, collections, cash handover and day close"
 app_email = "hello@ledgerx.local"
 app_license = "mit"
 
