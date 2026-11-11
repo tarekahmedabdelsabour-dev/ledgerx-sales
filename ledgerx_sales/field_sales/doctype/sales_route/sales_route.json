@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "creation": "2026-11-11 22:30:16.020734",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "route_name",
+  "salesman",
+  "weekday",
+  "column_break_1",
+  "is_active",
+  "company",
+  "section_break_1",
+  "customers"
+ ],
+ "fields": [
+  {
+   "fieldname": "route_name",
+   "fieldtype": "Data",
+   "label": "Route Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Salesman",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "weekday",
+   "fieldtype": "Select",
+   "label": "Day",
+   "options": "Saturday\nSunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nEvery Day",
+   "default": "Every Day",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Stops"
+  },
+  {
+   "fieldname": "customers",
+   "fieldtype": "Table",
+   "label": "Customers",
+   "options": "Route Customer"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-11 22:30:16.020734",
+ "modified_by": "Administrator",
+ "module": "Field Sales",
+ "name": "Sales Route",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User"
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "field:route_name",
+ "search_fields": "route_name,salesman",
+ "icon": "fa fa-road",
+ "track_changes": 1,
+ "allow_import": 1,
+ "show_title_field_in_link": 0,
+ "quick_entry": 0
+}

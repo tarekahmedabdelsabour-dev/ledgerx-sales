@@ -1,0 +1,5 @@
+<!-- LedgerX Sales dock icon (two-tone, same idea as the HRMS sprite). -->
+<svg id="ledgerx-sales-symbols" aria-hidden="true" style="display: none;" class="icon" xmlns="http://www.w3.org/2000/svg">
+	<style>.lx-l{fill:var(--duotone-light,#cbd5e1);stroke:none}.lx-d{fill:none;stroke:var(--duotone-dark,#475569);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}</style>
+	<symbol id="icon-field-sales-soft" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="5" class="lx-l"/><path d="M5 15V9h8v6M13 11h3l3 3v1h-6M7.5 17.5a1.5 1.5 0 100-.01M16.5 17.5a1.5 1.5 0 100-.01M7 11.5h3" class="lx-d"/></symbol>
+</svg>

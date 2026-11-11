@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "creation": "2026-11-11 22:30:16.020734",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "company",
+  "cost_center",
+  "default_price_list",
+  "column_break_1",
+  "main_warehouse",
+  "require_gps",
+  "max_visit_distance",
+  "section_break_2",
+  "block_credit_over_limit",
+  "allow_negative_van_stock",
+  "column_break_2",
+  "day_close_tolerance",
+  "section_break_3",
+  "cashier_account",
+  "default_bank_account",
+  "column_break_3",
+  "cash_parent_account",
+  "commission_component"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "default_price_list",
+   "fieldtype": "Link",
+   "label": "Default Selling Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "main_warehouse",
+   "fieldtype": "Link",
+   "label": "Main Warehouse (loads come from here)",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "require_gps",
+   "fieldtype": "Check",
+   "label": "Require GPS at Check-in",
+   "default": 1
+  },
+  {
+   "fieldname": "max_visit_distance",
+   "fieldtype": "Int",
+   "label": "Allowed Distance from Customer (m)",
+   "default": 300,
+   "description": "A check-in farther than this from the customer's saved location is flagged. 0 = off."
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Sales Rules"
+  },
+  {
+   "fieldname": "block_credit_over_limit",
+   "fieldtype": "Check",
+   "label": "Block Credit Sales Over the Customer Limit",
+   "default": 1
+  },
+  {
+   "fieldname": "allow_negative_van_stock",
+   "fieldtype": "Check",
+   "label": "Allow Selling Beyond Van Stock",
+   "default": 0
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "day_close_tolerance",
+   "fieldtype": "Currency",
+   "label": "Cash Difference Tolerance at Day Close",
+   "default": 5
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Cash and Accounting"
+  },
+  {
+   "fieldname": "cashier_account",
+   "fieldtype": "Link",
+   "label": "Company Cash Account (receives handovers)",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_bank_account",
+   "fieldtype": "Link",
+   "label": "Default Bank Account (deposits and transfers)",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cash_parent_account",
+   "fieldtype": "Link",
+   "label": "Parent Group for Salesman Cash Accounts",
+   "options": "Account",
+   "description": "Each salesman gets his own cash account under this group (an asset group such as Cash In Hand)."
+  },
+  {
+   "fieldname": "commission_component",
+   "fieldtype": "Link",
+   "label": "Salary Component for Commission",
+   "options": "Salary Component"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-11 22:30:16.020734",
+ "modified_by": "Administrator",
+ "module": "Field Sales",
+ "name": "Field Sales Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "read": 1,
+   "role": "Sales Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "icon": "fa fa-cog",
+ "issingle": 1
+}

@@ -1,0 +1,121 @@
+{
+ "charts": [
+  {
+   "chart_name": "Field Sales per Month",
+   "label": "Field Sales per Month"
+  },
+  {
+   "chart_name": "Visits by Outcome",
+   "label": "Visits by Outcome"
+  }
+ ],
+ "content": "[{\"id\": \"76b533239b\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Field Sales</b></span>\", \"col\": 12}}, {\"id\": \"12e4392e77\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Field Sales per Month\", \"col\": 6}}, {\"id\": \"c5299bfe47\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Visits by Outcome\", \"col\": 6}}, {\"id\": \"c845e5b2b8\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sales Today\", \"col\": 3}}, {\"id\": \"048659d06b\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Field Sales This Month\", \"col\": 3}}, {\"id\": \"3b25a0bb5a\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Cash Handovers\", \"col\": 3}}, {\"id\": \"124054b262\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Visits Today\", \"col\": 3}}, {\"id\": \"8d853ca23e\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salesman Screen\", \"col\": 3}}, {\"id\": \"a937bdfa59\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salesman\", \"col\": 3}}, {\"id\": \"b319d51aec\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Route\", \"col\": 3}}, {\"id\": \"3be1d1b5d1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Route Visit\", \"col\": 3}}, {\"id\": \"4bec85e97e\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Van Stock Transfer\", \"col\": 3}}, {\"id\": \"2cc88fea0d\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salesman Cash Handover\", \"col\": 3}}, {\"id\": \"dd9094ea0f\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salesman Settlement\", \"col\": 3}}, {\"id\": \"51cefa7478\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salesman Receivables\", \"col\": 3}}, {\"id\": \"f7bd870ce0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salesman Cash Position\", \"col\": 3}}, {\"id\": \"2c0084a4ff\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salesman Performance\", \"col\": 3}}, {\"id\": \"01c0d73fab\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Field Sales Settings\", \"col\": 3}}]",
+ "creation": "2026-11-11 22:30:16.108373",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 1,
+ "icon": "truck",
+ "idx": 1,
+ "is_hidden": 0,
+ "label": "Field Sales",
+ "links": [],
+ "modified": "2026-11-11 22:30:16.108373",
+ "modified_by": "Administrator",
+ "module": "Field Sales",
+ "name": "Field Sales",
+ "number_cards": [
+  {
+   "label": "Sales Today",
+   "number_card_name": "Sales Today"
+  },
+  {
+   "label": "Field Sales This Month",
+   "number_card_name": "Field Sales This Month"
+  },
+  {
+   "label": "Pending Cash Handovers",
+   "number_card_name": "Pending Cash Handovers"
+  },
+  {
+   "label": "Visits Today",
+   "number_card_name": "Visits Today"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 20.0,
+ "shortcuts": [
+  {
+   "label": "Salesman Screen",
+   "type": "URL",
+   "url": "/salesman"
+  },
+  {
+   "doc_view": "List",
+   "label": "Salesman",
+   "link_to": "Salesman",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Sales Route",
+   "link_to": "Sales Route",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Route Visit",
+   "link_to": "Route Visit",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Van Stock Transfer",
+   "link_to": "Van Stock Transfer",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Salesman Cash Handover",
+   "link_to": "Salesman Cash Handover",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Salesman Settlement",
+   "link_to": "Salesman Settlement",
+   "type": "DocType"
+  },
+  {
+   "label": "Salesman Receivables",
+   "link_to": "Salesman Receivables",
+   "report_ref_doctype": "Sales Invoice",
+   "type": "Report"
+  },
+  {
+   "label": "Salesman Cash Position",
+   "link_to": "Salesman Cash Position",
+   "report_ref_doctype": "Salesman",
+   "type": "Report"
+  },
+  {
+   "label": "Salesman Performance",
+   "link_to": "Salesman Performance",
+   "report_ref_doctype": "Salesman",
+   "type": "Report"
+  },
+  {
+   "doc_view": "List",
+   "label": "Field Sales Settings",
+   "link_to": "Field Sales Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "Field Sales",
+ "type": "Workspace"
+}

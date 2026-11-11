@@ -1,0 +1,22 @@
+{
+ "app": "ledgerx_sales",
+ "creation": "2026-11-11 22:30:16.108373",
+ "docstatus": 0,
+ "doctype": "Dock",
+ "idx": 0,
+ "items": [
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "field-sales-soft",
+   "link_to": "Field Sales",
+   "link_type": "Sidebar",
+   "title": "Field Sales"
+  }
+ ],
+ "modified": "2026-11-11 22:30:16.108373",
+ "modified_by": "Administrator",
+ "name": "ledgerx_sales",
+ "owner": "Administrator",
+ "standard": 1
+}

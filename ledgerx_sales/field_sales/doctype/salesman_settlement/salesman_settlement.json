@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "creation": "2026-11-11 22:30:16.020734",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "salesman",
+  "settlement_date",
+  "column_break_1",
+  "company",
+  "difference",
+  "section_break_1",
+  "invoiced_total",
+  "credit_given",
+  "column_break_2",
+  "collections_cash",
+  "collections_other",
+  "section_break_2",
+  "cash_in_hand",
+  "cash_counted",
+  "column_break_3",
+  "handed_over",
+  "section_break_3",
+  "visits_planned",
+  "visits_completed",
+  "column_break_4",
+  "distance_km",
+  "section_break_4",
+  "stock_lines",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Salesman",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "settlement_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "difference",
+   "fieldtype": "Currency",
+   "label": "Cash Difference",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Sales"
+  },
+  {
+   "fieldname": "invoiced_total",
+   "fieldtype": "Currency",
+   "label": "Invoiced Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "credit_given",
+   "fieldtype": "Currency",
+   "label": "Given on Credit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "collections_cash",
+   "fieldtype": "Currency",
+   "label": "Collected in Cash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "collections_other",
+   "fieldtype": "Currency",
+   "label": "Collected by Transfer / Cheque",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Cash"
+  },
+  {
+   "fieldname": "cash_in_hand",
+   "fieldtype": "Currency",
+   "label": "Cash in Hand (system)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cash_counted",
+   "fieldtype": "Currency",
+   "label": "Cash Counted"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "handed_over",
+   "fieldtype": "Currency",
+   "label": "Handed Over Today",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Activity"
+  },
+  {
+   "fieldname": "visits_planned",
+   "fieldtype": "Int",
+   "label": "Visits Planned",
+   "read_only": 1
+  },
+  {
+   "fieldname": "visits_completed",
+   "fieldtype": "Int",
+   "label": "Visits Completed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "distance_km",
+   "fieldtype": "Int",
+   "label": "Distance (km)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Van Stock Count"
+  },
+  {
+   "fieldname": "stock_lines",
+   "fieldtype": "Table",
+   "label": "Stock Lines",
+   "options": "Settlement Stock Line"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Salesman Settlement",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-11 22:30:16.020734",
+ "modified_by": "Administrator",
+ "module": "Field Sales",
+ "name": "Salesman Settlement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "format:SSET-{YYYY}-{#####}",
+ "title_field": "salesman",
+ "search_fields": "salesman,settlement_date",
+ "icon": "fa fa-calendar-check-o",
+ "track_changes": 1,
+ "allow_import": 1,
+ "show_title_field_in_link": 1,
+ "is_submittable": 1
+}

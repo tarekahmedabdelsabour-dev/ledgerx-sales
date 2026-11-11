@@ -1,0 +1,245 @@
+{
+ "actions": [],
+ "creation": "2026-11-11 22:30:16.020734",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "salesman_name",
+  "user",
+  "status",
+  "column_break_1",
+  "mobile_no",
+  "employee",
+  "driver",
+  "section_break_1",
+  "vehicle",
+  "warehouse",
+  "column_break_2",
+  "cash_account",
+  "company",
+  "section_break_2",
+  "price_list",
+  "territory",
+  "cost_center",
+  "column_break_3",
+  "can_sell_on_credit",
+  "max_discount_percent",
+  "default_route",
+  "section_break_3",
+  "monthly_target",
+  "commission_percent",
+  "column_break_4",
+  "commission_basis"
+ ],
+ "fields": [
+  {
+   "fieldname": "salesman_name",
+   "fieldtype": "Data",
+   "label": "Salesman Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "Login User",
+   "options": "User",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "description": "The user this salesman logs in with on the mobile screen (/salesman)."
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nOn Leave\nInactive",
+   "default": "Active",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "description": "HR link: used for commission payroll."
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver",
+   "description": "Fleet link: if he also drives, start and end of day record the odometer."
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Van and Stock"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Van Warehouse",
+   "options": "Warehouse",
+   "description": "The stock he carries in the vehicle."
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cash_account",
+   "fieldtype": "Link",
+   "label": "Salesman Cash Account",
+   "options": "Account",
+   "description": "Collected cash accumulates here until he hands it over."
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Selling Rules"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "can_sell_on_credit",
+   "fieldtype": "Check",
+   "label": "Can Sell on Credit",
+   "default": 1
+  },
+  {
+   "fieldname": "max_discount_percent",
+   "fieldtype": "Percent",
+   "label": "Max Discount %",
+   "default": 10
+  },
+  {
+   "fieldname": "default_route",
+   "fieldtype": "Link",
+   "label": "Default Route",
+   "options": "Sales Route"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Target and Commission"
+  },
+  {
+   "fieldname": "monthly_target",
+   "fieldtype": "Currency",
+   "label": "Monthly Sales Target"
+  },
+  {
+   "fieldname": "commission_percent",
+   "fieldtype": "Percent",
+   "label": "Commission %"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_basis",
+   "fieldtype": "Select",
+   "label": "Commission On",
+   "options": "Collected\nInvoiced",
+   "default": "Collected"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-11 22:30:16.020734",
+ "modified_by": "Administrator",
+ "module": "Field Sales",
+ "name": "Salesman",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User"
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "autoname": "format:SM-{#####}",
+ "title_field": "salesman_name",
+ "search_fields": "salesman_name,mobile_no,user",
+ "icon": "fa fa-user-circle",
+ "track_changes": 1,
+ "allow_import": 1,
+ "show_title_field_in_link": 1,
+ "quick_entry": 0
+}

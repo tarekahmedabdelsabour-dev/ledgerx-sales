@@ -1,0 +1,262 @@
+1-30 Days,1-30 يوم
+31-60 Days,31-60 يوم
+61-90 Days,61-90 يوم
+A confirmed handover cannot be deleted,لا يمكن حذف تسليم مؤكد
+A photo is required,الصورة مطلوبة
+Accounting,المحاسبة
+Accounting Not Configured,المحاسبة غير مضبوطة
+Active,نشط
+Active Salesmen,المندوبون النشطون
+Activity,النشاط
+Add at least one item,أضف صنفاً واحداً على الأقل
+Allow Selling Beyond Van Stock,السماح بالبيع أكثر من مخزن العربية
+Allowed Distance from Customer (m),المسافة المسموحة من العميل (متر)
+Amended From,معدّل من
+Amount,المبلغ
+Amount must be greater than zero,يجب أن يكون المبلغ أكبر من صفر
+Area / Address,المنطقة / العنوان
+Bank Account,الحساب البنكي
+Bank Deposit,إيداع بنكي
+Block Credit Sales Over the Customer Limit,منع البيع الآجل فوق حد ائتمان العميل
+Can Sell on Credit,يبيع آجل
+Cash,نقدي
+Cash - {0},نقدية - {0}
+Cash Counted,النقدية الفعلية (الجرد)
+Cash Difference,فرق النقدية
+Cash Difference Tolerance at Day Close,الفرق المسموح في النقدية عند إقفال اليوم
+Cash Position,مركز النقدية
+Cash and Accounting,النقدية والحسابات
+Cash handover {0} - {1},تسليم نقدية {0} - {1}
+Cash in Hand,النقدية مع المندوب
+Cash in Hand (system),النقدية بالنظام
+Cash in Hand When Requested,النقدية مع المندوب وقت الطلب
+Cash to Cashier,نقدي لأمين الخزينة
+Check-in,تسجيل الحضور
+Check-in Time,وقت الحضور
+Check-out Time,وقت الانصراف
+Check-out cannot be before check-in,لا يمكن أن يسبق الانصراف الحضور
+Checked In,داخل الزيارة
+Choose the bank account,اختر الحساب البنكي
+Choose the visit outcome,اختر نتيجة الزيارة
+Collected,المحصّل
+Collected Today,المحصّل اليوم
+Collected Total,إجمالي التحصيل
+Collected by Transfer / Cheque,محصّل بتحويل / شيك
+Collected by {0},تحصيل بواسطة {0}
+Collected in Cash,محصّل نقداً
+Collection,تحصيل
+Commission,العمولة
+Commission %,نسبة العمولة %
+Commission On,العمولة على
+Commission Period,فترة العمولة
+Company,الشركة
+Company Cash Account (receives handovers),حساب خزينة الشركة (يستلم التسليمات)
+Completed,مكتمل
+Confirm Receipt,تأكيد الاستلام
+Confirm that you received {0}?,هل تؤكد أنك استلمت {0}؟
+Confirmed,مؤكد
+Cost Center,مركز التكلفة
+Counted Qty,الكمية المجرودة
+Create Commission (Additional Salary),إنشاء العمولة (راتب إضافي)
+Create Van Warehouse and Cash Account,إنشاء مخزن العربية وحساب النقدية
+Created: {0},تم إنشاء: {0}
+Credit limit exceeded. Available credit: {0},تجاوز حد الائتمان. المتاح: {0}
+Customer,العميل
+Customer Name,اسم العميل
+Customer {0} is not on your routes,العميل {0} ليس ضمن خطوط سيرك
+Customers,العملاء
+Date,التاريخ
+Day,اليوم
+Default Bank Account (deposits and transfers),الحساب البنكي الافتراضي (إيداعات وتحويلات)
+Default Cost Center,مركز التكلفة الافتراضي
+Default Route,خط السير الافتراضي
+Default Salesman,المندوب الافتراضي
+Default Selling Price List,قائمة أسعار البيع الافتراضية
+Deposit Details,تفاصيل الإيداع
+Deposit Reference,مرجع الإيداع
+Deposit Slip Photo,صورة إيصال الإيداع
+Difference,الفرق
+"Discount on {0} is {1}%, more than your limit of {2}%",الخصم على {0} هو {1}% وهو أكبر من حدك المسموح {2}%
+Distance (km),المسافة (كم)
+Distance from Customer (m),المسافة من العميل (متر)
+Driver,السائق
+Employee,الموظف
+Enter the deposit reference or attach the deposit slip photo,اكتب مرجع الإيداع أو أرفق صورة الإيصال
+Enter the rejection reason,أدخل سبب الرفض
+Enter the transfer or cheque reference,اكتب مرجع التحويل أو الشيك
+Every Day,كل يوم
+Field Sales,المبيعات الميدانية
+Field Sales Settings,إعدادات المبيعات الميدانية
+Field Sales This Month,مبيعات المندوبين هذا الشهر
+Field Sales per Month,مبيعات المندوبين شهرياً
+Field Salesman,مندوب ميداني
+Field sale by {0},بيع ميداني بواسطة {0}
+Friday,الجمعة
+From,من
+From Warehouse,من مخزن
+General,عام
+Given on Credit,آجل
+HR,الموارد البشرية
+HR ,الموارد البشرية
+Handed Over Today,مسلَّم اليوم
+Handovers by Status,التسليمات حسب الحالة
+Hit Rate %,نسبة نجاح الزيارات %
+Home,الرئيسية
+Inactive,غير نشط
+Invalid data,بيانات غير صالحة
+Invalid data ,بيانات غير صالحة
+Invalid item line,سطر صنف غير صالح
+Invalid location,موقع غير صالح
+Invalid method,طريقة غير صالحة
+Invalid outcome,نتيجة غير صالحة
+Invalid photo,صورة غير صالحة
+Invalid transfer type,نوع تحويل غير صالح
+Invalid visit,زيارة غير صالحة
+Invoiced,المفوتر
+Invoiced Total,إجمالي الفواتير
+Invoices,الفواتير
+Item,الصنف
+Item Name,اسم الصنف
+Items,الأصناف
+Journal Entry,قيد يومية
+Last Day Close,آخر إقفال يوم
+Latitude,خط العرض
+Link the salesman to an Employee first,اربط المندوب بموظف أولاً
+Load,تحميل
+Load Requests,طلبات التحميل
+Login User,مستخدم الدخول
+Longitude,خط الطول
+Main Warehouse (loads come from here),المخزن الرئيسي (التحميل منه)
+Max Discount %,أقصى خصم %
+Max Discount % must be between 0 and 100,أقصى خصم يجب أن يكون بين 0 و100
+Method,الطريقة
+Mobile No,رقم الموبايل
+Monday,الاثنين
+Monthly Sales Target,هدف المبيعات الشهري
+No Order,لا يوجد طلب
+No commission is due for this period,لا توجد عمولة مستحقة لهذه الفترة
+No van warehouse is set for you,لا يوجد مخزن عربية مخصص لك
+Not Due,غير مستحق
+Not enough stock in the van: {0},الكمية غير كافية في العربية: {0}
+Notes,ملاحظات
+On Leave,في إجازة
+Only a pending handover can be confirmed,يمكن تأكيد التسليم المعلّق فقط
+Only a pending handover can be rejected,يمكن رفض التسليم المعلّق فقط
+Open Shop on Map,عرض المحل على الخريطة
+Out of Range,خارج النطاق
+Out of Range Visits,زيارات خارج النطاق
+Outcome,النتيجة
+Outstanding,المديونية
+Over 90 Days,أكثر من 90 يوم
+Parent Group for Salesman Cash Accounts,المجموعة الأم لحسابات نقدية المندوبين
+Payment Entry,قيد دفع
+Pending,قيد المراجعة
+Pending Cash Handovers,تسليمات نقدية معلّقة
+Pending Handover,تسليم معلّق
+Performance,الأداء
+Photo is too large,الصورة كبيرة جدًا
+Planned,مخطط
+Please log in,يرجى تسجيل الدخول
+Postponed,مؤجلة
+Price List,قائمة الأسعار
+Productive Visits,زيارات مثمرة
+Qty,الكمية
+Receivables,المديونيات
+Reference,المرجع
+Reject,رفض
+Rejected,مرفوض
+Rejection Reason,سبب الرفض
+Related,ذات صلة
+Remarks,ملاحظات
+Request ID,معرّف الطلب
+Requested from the Mobile Screen,مطلوب من شاشة الموبايل
+Require GPS at Check-in,إلزام GPS عند الحضور
+Result,النتيجة
+Return,إرجاع
+Review,المراجعة
+Reviewed By,راجعه
+Route,المسار
+Route Customer,عميل في خط السير
+Route Name,اسم خط السير
+Route Visit,زيارة
+Route Visits,الزيارات
+Row {0}: customer {1} is repeated,السطر {0}: العميل {1} مكرر
+Row {0}: quantity must be greater than zero,السطر {0}: الكمية يجب أن تكون أكبر من صفر
+Salary Component for Commission,مكوّن الراتب للعمولة
+Sale,بيع
+Sale and Collection,بيع وتحصيل
+Sales,المبيعات
+Sales Invoice,فاتورة مبيعات
+Sales Route,خط سير
+Sales Rules,قواعد البيع
+Sales Today,مبيعات اليوم
+Sales Total,إجمالي المبيعات
+Salesman,مندوب مبيعات
+Salesman Cash Account,حساب نقدية المندوب
+Salesman Cash Handover,تسليم نقدية المندوب
+Salesman Cash Position,مركز نقدية المندوبين
+Salesman Name,اسم المندوب
+Salesman Performance,أداء المندوبين
+Salesman Receivables,مديونيات المندوبين
+Salesman Screen,شاشة المندوب
+Salesman Settlement,إقفال يوم المندوب
+Salesman {0} has no cash account. Open the salesman and press Create Accounts.,المندوب {0} ليس له حساب نقدية. افتح المندوب واضغط إنشاء الحسابات.
+Salesman {0} has no van warehouse,المندوب {0} ليس له مخزن عربية
+Saturday,السبت
+Selling Rules,قواعد البيع
+Set the cashier account in Field Sales Settings and create the salesman's cash account.,حدّد حساب الخزينة في إعدادات المبيعات الميدانية وأنشئ حساب نقدية المندوب.
+Set the commission salary component in Field Sales Settings,حدّد مكوّن راتب العمولة في إعدادات المبيعات الميدانية
+Set the default bank account in Field Sales Settings,حدّد الحساب البنكي الافتراضي في إعدادات المبيعات الميدانية
+Set the main warehouse in Field Sales Settings,حدّد المخزن الرئيسي في إعدادات المبيعات الميدانية
+Set the parent group for salesman cash accounts in Field Sales Settings first,حدّد المجموعة الأم لحسابات نقدية المندوبين في إعدادات المبيعات الميدانية أولاً
+Settlement Stock Line,سطر جرد الإقفال
+Setup,الإعداد
+Shop Closed,المحل مغلق
+Shop Latitude,خط عرض المحل
+Shop Longitude,خط طول المحل
+Shop Photo,صورة المحل
+Skipped,تم التخطي
+Status,الحالة
+Stock Entry,حركة مخزون
+Stock Lines,أسطر الجرد
+Stop Order,ترتيب المحطة
+Stops,المحطات
+Sunday,الأحد
+System Qty,كمية النظام
+Target %,نسبة الهدف %
+Target and Commission,الهدف والعمولة
+Territory,المنطقة
+The amount is more than the cash in the salesman's hands ({0}),المبلغ أكبر من النقدية مع المندوب ({0})
+The cash difference is {0}. Write the reason in the remarks.,فرق النقدية {0}. اكتب السبب في الملاحظات.
+The customer has no saved location yet. Save it from the customer screen.,العميل ليس له موقع محفوظ. ثبّت الموقع من شاشة العميل.
+The day of {0} is already closed for this salesman ({1}),يوم {0} مقفل بالفعل لهذا المندوب ({1})
+The paid amount cannot exceed the invoice total ({0}),المبلغ المدفوع لا يمكن أن يزيد عن إجمالي الفاتورة ({0})
+The salesman's cash account holds less than this amount,حساب نقدية المندوب به أقل من هذا المبلغ
+Thursday,الخميس
+To,إلى
+To Warehouse,إلى مخزن
+Transfer Type,نوع التحويل
+Tuesday,الثلاثاء
+Turn on the location to check in,فعّل الموقع لتسجيل الحضور
+UOM,الوحدة
+User {0} is already linked to another salesman,المستخدم {0} مرتبط بمندوب آخر
+Van Stock,مخزن العربية
+Van Stock Count,جرد مخزن العربية
+Van Stock Transfer,تحويل مخزن العربية
+Van Transfer Item,صنف تحويل العربية
+Van Warehouse,مخزن العربية
+Van and Stock,العربية والمخزن
+Van stock {0}: {1} - {2},مخزن العربية {0}: {1} - {2}
+Van {0},عربية {0}
+Vehicle,المركبة
+View,عرض
+Visits,الزيارات
+Visits Completed,الزيارات المنفذة
+Visits Planned,الزيارات المخططة
+Visits Today,زيارات اليوم
+Visits by Outcome,الزيارات حسب النتيجة
+Warehouse,المخزن
+Wednesday,الأربعاء
+You are {0} m away from the customer's location,أنت على بعد {0} متر من موقع العميل
+You cannot sell on credit. Collect the full amount.,لا يمكنك البيع الآجل. حصّل المبلغ كاملاً.
+Your user is not linked to an active salesman. Ask the sales manager.,مستخدمك غير مرتبط بمندوب نشط. اطلب من مدير المبيعات.
