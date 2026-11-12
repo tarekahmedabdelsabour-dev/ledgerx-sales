@@ -1,6 +1,7 @@
 import frappe
 from frappe import _
 from frappe.model.document import Document
+from frappe.utils import flt
 
 from ledgerx_sales.utils import sales
 
@@ -15,7 +16,9 @@ class Salesman(Document):
 		self.price_list = self.price_list or s.default_price_list
 		if self.driver and not self.vehicle:
 			self.vehicle = frappe.db.get_value("Driver", self.driver, "current_vehicle")
-		if self.max_discount_percent and (self.max_discount_percent < 0 or self.max_discount_percent > 100):
+		# a default coming from the form can still be text at this point, so convert before comparing
+		self.max_discount_percent = flt(self.max_discount_percent)
+		if self.max_discount_percent < 0 or self.max_discount_percent > 100:
 			frappe.throw(_("Max Discount % must be between 0 and 100"))
 
 	def on_update(self):
