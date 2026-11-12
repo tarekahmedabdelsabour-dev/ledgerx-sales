@@ -92,7 +92,7 @@ SALES = {
 	"Visits Planned": "الزيارات المخططة", "Visits Today": "زيارات اليوم", "Visits by Outcome": "الزيارات حسب النتيجة",
 	"Wednesday": "الأربعاء", "You are {0} m away from the customer's location": "أنت على بعد {0} متر من موقع العميل",
 	"You cannot sell on credit. Collect the full amount.": "لا يمكنك البيع الآجل. حصّل المبلغ كاملاً.",
-	"Your user is not linked to an active salesman. Ask the sales manager.": "مستخدمك غير مرتبط بمندوب نشط. اطلب من مدير المبيعات.",
+	"Your user ({0}) is not linked to an active salesman. Ask the sales manager.": "المستخدم ({0}) غير مرتبط بمندوب نشط. اطلب من مدير المبيعات.",
 	"A photo is required": "الصورة مطلوبة", "Invalid photo": "صورة غير صالحة", "Photo is too large": "الصورة كبيرة جدًا",
 	"Please log in": "يرجى تسجيل الدخول", "Invalid data ": "بيانات غير صالحة", "Related": "ذات صلة", "Home": "الرئيسية",
 	"Setup": "الإعداد", "HR ": "الموارد البشرية",

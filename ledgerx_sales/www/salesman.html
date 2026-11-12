@@ -54,7 +54,7 @@ body{background:var(--bg,#f4f6f8)}
 <script>
 (function(){
  var CSRF="{{ csrf_token }}", P="/api/method/ledgerx_sales.api.salesman.", ME=null, TAB="home", STACK=[], CART=[], ITEMS=[], CUR=null, GEO=null, BUSY=false;
- var QK="lxs_queue_v1";
+ var QK="lxs_queue_v1", LOADERR=null;
  var $=function(i){return document.getElementById(i)};
  function esc(s){var d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML}
  function money(n){return (Number(n)||0).toLocaleString("ar-EG",{maximumFractionDigits:2})}
@@ -124,10 +124,11 @@ body{background:var(--bg,#f4f6f8)}
  function bindBack(){var b=$("bk");if(b)b.onclick=pop}
 
  /* ---------- data ---------- */
- function load(){return call("me").then(function(d){ME=d;render()}).catch(function(e){
-   $("app").innerHTML='<div class="msg err">'+esc(e.message)+'</div>'})}
+ function load(){return call("me").then(function(d){ME=d;LOADERR=null;render()}).catch(function(e){
+   LOADERR=e.message;render()})}
  function render(){
-  if(!ME){$("app").innerHTML='<div class="mute">جاري التحميل...</div>';return}
+  if(!ME){$("app").innerHTML=LOADERR?'<div class="msg err">'+esc(LOADERR)+'</div><button class="btn alt" id="retry">إعادة المحاولة</button>':'<div class="mute">جاري التحميل...</div>';
+   var r=$("retry");if(r)r.onclick=function(){LOADERR=null;render();load()};return}
   if(STACK.length){STACK[STACK.length-1]();return}
   ({home:vHome,route:vRoute,cust:vCust,stock:vStock,cash:vCash})[TAB]()}
 

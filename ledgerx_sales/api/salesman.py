@@ -24,7 +24,7 @@ def _salesman():
 		frappe.throw(_("Please log in"), frappe.AuthenticationError)
 	name = frappe.db.get_value("Salesman", {"user": frappe.session.user, "status": "Active"}, "name")
 	if not name:
-		frappe.throw(_("Your user is not linked to an active salesman. Ask the sales manager."), frappe.PermissionError)
+		frappe.throw(_("Your user ({0}) is not linked to an active salesman. Ask the sales manager.").format(frappe.session.user), frappe.PermissionError)
 	return frappe.get_doc("Salesman", name)
 
 
