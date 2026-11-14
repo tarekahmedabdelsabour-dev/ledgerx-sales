@@ -95,6 +95,16 @@ def _visit_of(sm, visit, customer):
 
 
 # ------------------------------------------------------------------ home
+def _other_screen():
+	"""Link to the driver screen when the same user is also an active driver (None otherwise)."""
+	try:
+		if frappe.db.exists("Driver", {"user": frappe.session.user, "status": "Active"}):
+			return {"url": "/driver", "label": _("Driver Screen")}
+	except Exception:
+		pass
+	return None
+
+
 @frappe.whitelist()
 def me():
 	sm = _salesman()
@@ -113,6 +123,7 @@ def me():
 	stock = sales.van_stock(sm.warehouse)
 	base = col_month if sm.commission_basis == "Collected" else inv_month
 	return {
+		"switch": _other_screen(),
 		"salesman": sm.name, "name": sm.salesman_name, "vehicle": sm.vehicle, "warehouse": sm.warehouse,
 		"currency": frappe.get_cached_value("Company", company, "default_currency"),
 		"can_credit": cint(sm.can_sell_on_credit), "max_discount": flt(sm.max_discount_percent),

@@ -135,7 +135,7 @@ body{background:var(--bg,#f4f6f8)}
  /* ---------- home ---------- */
  function vHome(){
   var t=ME.today,mo=ME.month,pr=mo.progress;
-  var h='<h1>أهلاً '+esc(ME.name)+'</h1><div class="mute">'+(ME.vehicle?"المركبة: "+esc(ME.vehicle):"")+'</div>';
+  var h='<h1>أهلاً '+esc(ME.name)+'</h1><div class="mute">'+(ME.vehicle?"المركبة: "+esc(ME.vehicle):"")+'</div>'+(ME.switch?'<a class="btn" href="'+esc(ME.switch.url)+'" style="display:block;text-decoration:none;text-align:center;margin:6px 0">⇄ '+esc(ME.switch.label)+'</a>':"");
   if(!ME.has_cash_account)h+='<div class="msg warn">لا يوجد حساب نقدية لك. اطلب من مدير المبيعات إنشاءه قبل التحصيل.</div>';
   if(ME.day_closed)h+='<div class="msg ok">تم إقفال يوم اليوم ('+esc(ME.day_closed)+')</div>';
   h+='<div class="card"><h2>اليوم</h2><div class="row">'+
