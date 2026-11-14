@@ -3,7 +3,7 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.utils import flt
 
-from ledgerx_sales.utils import sales
+from ledgerx_sales.utils import logic, sales
 
 
 class Salesman(Document):
@@ -14,6 +14,13 @@ class Salesman(Document):
 		self.company = self.company or s.company
 		self.cost_center = self.cost_center or s.cost_center
 		self.price_list = self.price_list or s.default_price_list
+		# one person: the same user may also be a driver and an employee, link them without retyping
+		if self.user and not self.driver:
+			self.driver = frappe.db.get_value("Driver", {"user": self.user, "status": "Active"}, "name")
+		if not self.employee:
+			from ledgerx_sales.utils import hr_link
+
+			self.employee = hr_link.employee_of(self)
 		if self.driver and not self.vehicle:
 			self.vehicle = frappe.db.get_value("Driver", self.driver, "current_vehicle")
 		# a default coming from the form can still be text at this point, so convert before comparing
@@ -61,17 +68,16 @@ class Salesman(Document):
 		"""HR link: an Additional Salary for the commission earned in a period."""
 		frappe.only_for(("Sales Manager", "System Manager"))
 		s = sales.settings()
-		if not self.employee:
+		from ledgerx_sales.utils import hr_link
+
+		if not hr_link.employee_of(self):
 			frappe.throw(_("Link the salesman to an Employee first"))
 		if not s.commission_component:
 			frappe.throw(_("Set the commission salary component in Field Sales Settings"))
-		from ledgerx_sales.utils import logic
-
 		base = sales.period_base(self, from_date, to_date)
-		amount = logic.commission(base, self.commission_percent)
-		if amount <= 0:
+		if logic.commission(base, self.commission_percent) <= 0:
 			frappe.throw(_("No commission is due for this period"))
-		doc = frappe.get_doc({"doctype": "Additional Salary", "employee": self.employee,
-			"salary_component": s.commission_component, "amount": amount, "payroll_date": to_date,
-			"company": sales.company_of(self, s), "overwrite_salary_structure_amount": 1}).insert(ignore_permissions=True)
-		return doc.name
+		name = hr_link.make_commission(self, from_date, to_date, s)
+		if not name:
+			frappe.throw(_("A commission for this period was already created"))
+		return name

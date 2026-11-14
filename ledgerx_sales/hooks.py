@@ -26,3 +26,10 @@ doctype_js = {"Customer": "public/js/customer.js"}
 
 after_install = "ledgerx_sales.install.after_install"
 after_migrate = "ledgerx_sales.install.after_migrate"
+
+# On the 1st: last month's commission for each salesman as draft Additional Salary (HR reviews and submits)
+scheduler_events = {
+	"cron": {
+		"0 4 1 * *": ["ledgerx_sales.utils.hr_link.monthly_commissions"],
+	},
+}

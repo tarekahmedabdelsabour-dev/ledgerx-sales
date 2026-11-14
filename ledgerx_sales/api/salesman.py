@@ -12,7 +12,7 @@ import frappe
 from frappe import _
 from frappe.utils import add_days, cint, flt, get_datetime, getdate, now_datetime, nowdate
 
-from ledgerx_sales.utils import logic, sales
+from ledgerx_sales.utils import hr_link, logic, sales
 
 MAX_PHOTO_BYTES = 3 * 1024 * 1024
 DATA_URL = re.compile(r"^data:image/(jpeg|jpg|png|webp);base64,(.+)$", re.S)
@@ -282,6 +282,7 @@ def check_in(customer, lat=None, lng=None, photo=None, request_id=None):
 	visit.save(ignore_permissions=True)
 	if photo:
 		_save_photo(visit, "photo", photo)
+	hr_link.on_activity(sm)
 	return {"visit": visit.name, "warning": warning, "distance": visit.distance_m}
 
 
@@ -376,6 +377,7 @@ def create_sale(customer, lines, paid_amount=0, payment_mode="Cash", reference_n
 		pe = sales.make_payment_entry(sm.name, customer, paid, "Cash" if payment_mode == "Cash" else "Bank",
 			[(si.name, paid)], reference_no=reference_no, route_visit=visit, request_id=f"{request_id}-pay" if request_id else None)
 	_bump_visit(visit, total, paid)
+	hr_link.on_activity(sm)
 	return _sale_result(si.name, pe.name if pe else None)
 
 
@@ -489,5 +491,6 @@ def close_day(cash_counted, stock_counts=None, remarks=None, request_id=None):
 		"cash_counted": flt(cash_counted), "remarks": remarks, "stock_lines": lines})
 	doc.insert(ignore_permissions=True)
 	doc.submit()
+	hr_link.on_day_close(sm, today)
 	return {"settlement": doc.name, "difference": flt(doc.difference), "cash_in_hand": flt(doc.cash_in_hand),
 		"invoiced": flt(doc.invoiced_total), "collected": flt(doc.collections_cash) + flt(doc.collections_other)}
