@@ -2,13 +2,14 @@ import frappe
 from frappe import _
 from frappe.utils import flt, getdate, nowdate
 
-from ledgerx_sales.utils import logic
+from ledgerx_sales.utils import logic, scope
 
 BUCKETS = ["current", "1-30", "31-60", "61-90", "90+"]
 
 
 def execute(filters=None):
 	filters = frappe._dict(filters or {})
+	own = scope.check_filter(filters)
 	today = getdate(nowdate())
 	cond, args = ["si.docstatus = 1", "si.outstanding_amount > 0.005"], {}
 	if filters.company:
@@ -20,6 +21,9 @@ def execute(filters=None):
 	if filters.salesman:
 		cond.append("COALESCE(NULLIF(si.salesman, ''), c.default_salesman) = %(salesman)s")
 		args["salesman"] = filters.salesman
+	elif own is not None:
+		cond.append("COALESCE(NULLIF(si.salesman, ''), c.default_salesman) IN %(own)s")
+		args["own"] = tuple(own) or ("",)
 	else:
 		cond.append("COALESCE(NULLIF(si.salesman, ''), c.default_salesman) IS NOT NULL")
 	rows = frappe.db.sql(

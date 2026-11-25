@@ -2,16 +2,19 @@ import frappe
 from frappe import _
 from frappe.utils import flt
 
-from ledgerx_sales.utils import logic, sales
+from ledgerx_sales.utils import logic, sales, scope
 
 
 def execute(filters=None):
 	filters = frappe._dict(filters or {})
+	own = scope.check_filter(filters)
 	f = {}
 	if filters.company:
 		f["company"] = filters.company
 	if filters.salesman:
 		f["name"] = filters.salesman
+	elif own is not None:
+		f["name"] = ["in", own or [""]]
 	fd, td = filters.from_date, filters.to_date
 	data = []
 	for s in frappe.get_all("Salesman", filters=f, fields=["name", "salesman_name", "monthly_target", "commission_percent", "commission_basis"]):

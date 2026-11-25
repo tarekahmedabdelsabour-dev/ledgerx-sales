@@ -2,16 +2,19 @@ import frappe
 from frappe import _
 from frappe.utils import flt, nowdate
 
-from ledgerx_sales.utils import sales
+from ledgerx_sales.utils import sales, scope
 
 
 def execute(filters=None):
 	filters = frappe._dict(filters or {})
+	own = scope.check_filter(filters)
 	f = {"status": ["!=", "Inactive"]}
 	if filters.company:
 		f["company"] = filters.company
 	if filters.salesman:
 		f["name"] = filters.salesman
+	elif own is not None:
+		f["name"] = ["in", own or [""]]
 	data = []
 	for s in frappe.get_all("Salesman", filters=f, fields=["name", "salesman_name", "cash_account"]):
 		today_col = flt(frappe.db.sql("SELECT COALESCE(SUM(paid_amount),0) FROM `tabPayment Entry` WHERE salesman=%s AND posting_date=%s "

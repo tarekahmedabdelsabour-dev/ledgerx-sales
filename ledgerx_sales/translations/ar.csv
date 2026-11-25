@@ -263,3 +263,5 @@ Your user ({0}) is not linked to an active salesman. Ask the sales manager.,ال
 "Salesman Screen","شاشة المندوب"
 "Driver Screen","شاشة السائق"
 A commission for this period was already created,تم إنشاء عمولة هذه الفترة من قبل
+You can only see your own figures,تستطيع رؤية أرقامك أنت فقط
+This customer already has a saved location. Ask the sales manager to change it.,هذا العميل له موقع محفوظ بالفعل. اطلب من مدير المبيعات تغييره.

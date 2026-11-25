@@ -233,7 +233,7 @@ def all_items(search=None, limit=40):
 		fields=["name", "item_name", "stock_uom"], limit=cint(limit), order_by="item_name asc")
 
 
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def save_location(customer, lat, lng):
 	"""Pin the customer's shop on the map from the field (used later to verify visits)."""
 	sm = _salesman()
@@ -241,12 +241,16 @@ def save_location(customer, lat, lng):
 	lat, lng = flt(lat), flt(lng)
 	if not (-90 <= lat <= 90 and -180 <= lng <= 180) or (not lat and not lng):
 		frappe.throw(_("Invalid location"))
+	# the first pin comes from the field; moving an existing pin needs write permission on the customer (a manager)
+	has_pin = frappe.db.get_value("Customer", customer, ["fs_latitude", "fs_longitude"])
+	if any(has_pin or ()) and not frappe.has_permission("Customer", "write", customer):
+		frappe.throw(_("This customer already has a saved location. Ask the sales manager to change it."), frappe.PermissionError)
 	frappe.db.set_value("Customer", customer, {"fs_latitude": lat, "fs_longitude": lng})
 	return True
 
 
 # ------------------------------------------------------------------ visits
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def check_in(customer, lat=None, lng=None, photo=None, request_id=None):
 	sm = _salesman()
 	_check_customer(sm, customer)
@@ -286,7 +290,7 @@ def check_in(customer, lat=None, lng=None, photo=None, request_id=None):
 	return {"visit": visit.name, "warning": warning, "distance": visit.distance_m}
 
 
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def check_out(visit, outcome=None, notes=None):
 	sm = _salesman()
 	doc = frappe.get_doc("Route Visit", visit)
@@ -306,7 +310,7 @@ def check_out(visit, outcome=None, notes=None):
 
 
 # ------------------------------------------------------------------ sale
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def create_sale(customer, lines, paid_amount=0, payment_mode="Cash", reference_no=None, visit=None, request_id=None):
 	"""Invoice from the van warehouse; an optional payment received at the same time."""
 	sm = _salesman()
@@ -388,7 +392,7 @@ def _sale_result(name, payment=None):
 
 
 # ------------------------------------------------------------------ collection
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def collect(customer, amount, mode="Cash", reference_no=None, invoices=None, visit=None, request_id=None):
 	"""Receive money: allocated to the customer's oldest open invoices (or the chosen ones); any rest stays as advance."""
 	sm = _salesman()
@@ -413,7 +417,7 @@ def collect(customer, amount, mode="Cash", reference_no=None, invoices=None, vis
 
 
 # ------------------------------------------------------------------ cash handover
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def handover(amount, method="Cash to Cashier", deposit_reference=None, slip=None, bank_account=None, request_id=None):
 	sm = _salesman()
 	if old := _existing("Salesman Cash Handover", request_id):
@@ -430,7 +434,7 @@ def handover(amount, method="Cash to Cashier", deposit_reference=None, slip=None
 
 
 # ------------------------------------------------------------------ stock request
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def request_transfer(lines, transfer_type="Load", remarks=None, request_id=None):
 	"""A request to load or return stock: saved as a draft for the manager to submit."""
 	sm = _salesman()
@@ -478,7 +482,7 @@ def day_summary():
 		"closed": frappe.db.get_value("Salesman Settlement", {"salesman": sm.name, "settlement_date": today, "docstatus": 1}, "name")}
 
 
-@frappe.whitelist()
+@frappe.whitelist(methods=["POST"])
 def close_day(cash_counted, stock_counts=None, remarks=None, request_id=None):
 	sm = _salesman()
 	today = getdate(nowdate())
