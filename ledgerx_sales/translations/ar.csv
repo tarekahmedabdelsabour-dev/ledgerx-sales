@@ -265,3 +265,4 @@ Your user ({0}) is not linked to an active salesman. Ask the sales manager.,ال
 A commission for this period was already created,تم إنشاء عمولة هذه الفترة من قبل
 You can only see your own figures,تستطيع رؤية أرقامك أنت فقط
 This customer already has a saved location. Ask the sales manager to change it.,هذا العميل له موقع محفوظ بالفعل. اطلب من مدير المبيعات تغييره.
+A closed day cannot be cancelled. Ask the system manager if it was entered by mistake.,لا يمكن إلغاء يوم مُغلق. اطلب من مدير النظام إذا أُدخل بالخطأ.

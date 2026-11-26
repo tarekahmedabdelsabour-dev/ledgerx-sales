@@ -19,6 +19,11 @@ class SalesmanSettlement(Document):
 		if abs(flt(self.difference)) > flt(s.day_close_tolerance) and not (self.remarks or "").strip():
 			frappe.throw(_("The cash difference is {0}. Write the reason in the remarks.").format(self.difference))
 
+	def before_cancel(self):
+		# a closed day is a record of what was counted: it is not undone, a correction is a new entry (System Manager only, for a real mistake)
+		if "System Manager" not in frappe.get_roles():
+			frappe.throw(_("A closed day cannot be cancelled. Ask the system manager if it was entered by mistake."), frappe.PermissionError)
+
 	def compute(self, sm):
 		d = getdate(self.settlement_date)
 		sm_name = self.salesman
